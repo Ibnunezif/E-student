@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact E-Student</title>
+  <link href="contact.css" rel="stylesheet">
+  <script>
+    function showAlert(event) {
+      event.preventDefault(); // Prevent the default form submission
+      alert("Your message has been sent!");
+      // Optionally, you can submit the form here if needed
+      document.getElementById("contact-form").submit(); // Uncomment this line to submit the form
+    }
+  </script>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <h1>Contact E-Student</h1>
+  </div>
+</header>
+
+<div class="container">
+  <div class="content">
+    <h2>Get in Touch</h2>
+    <p>We're here to help! If you have any questions, feedback, or need assistance, please don't hesitate to reach out to us.</p>
+  </div>
+
+  <div class="content">
+    <h2>Contact Information</h2>
+    <div class="contact-info">
+      <h3>Email</h3>
+      <p><a href="mailto:info@e-student.com">info@e-student.com</a></p>
+    </div>
+    <div class="contact-info">
+      <h3>Phone</h3>
+      <p>+1 (555) 123-4567</p>
+    </div>
+    <div class="contact-info">
+      <h3>Address</h3>
+      <p>123 Education Street, Learning City, ST 12345, Country</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>Contact Form</h2>
+    <form id="contact-form" action="messageSent" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <input type="submit" class="button" value="Send Message" onclick="showAlert(event)"/>
+    </form>
+  </div>
+</div>
+</body>
+</html>
